@@ -1,5 +1,6 @@
 import sys
-sys.path.append('/usr/local/lib/python3.13/dist-packages/bible') # Fixing for the broken package
+# sys.path.append('/usr/local/lib/python3.13/dist-packages/bible') # Fixing for the broken package (colab)
+sys.path.append('/usr/local/lib/python3.13/site-packages/bible') # Fixing for the broken package (railway)
 
 import bible.data
 books = bible.data.bible_data("NKJV") # 31103
