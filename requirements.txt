@@ -1,6 +1,2 @@
-selenium==4.1.0
-gradio==3.50.2
-beautifulsoup4==4.12.3
-requests==2.26.0
-urllib3==1.26.15
-matplotlib==3.7.1
+fastapi
+uvicorn[standard]
