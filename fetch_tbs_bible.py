@@ -98,6 +98,7 @@ for index, bcv in enumerate(verses):
   if index < current_index: 
     continue
   print(index)
+  logger.info(f"Index: {index}")
   b, c, v = bcv.split("_")
   verse = fetch_tbs_verse("smt", b, c, v)
   # print(verse)
