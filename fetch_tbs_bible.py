@@ -118,7 +118,7 @@ for index, bcv in enumerate(verses):
       df_to_upload = get_appended_df(smt_bible)
       path_in_repo = f"tbs_smt.csv"
       repo_id = os.environ["USERNAME"] + "/" + os.environ["DATASET_REPO_NAME"]
-      commit_message = f"Added {df_to_upload.shape[0]-previous_length} rows: {previous_length} to {df_to_upload.shape[0]}" 
+      commit_message = f"Added {df_to_upload.shape[0]-previous_length} rows: {previous_length} to {df_to_upload.shape[0] - 1}" 
       logger.info(f"{commit_message}")
       upload_dataframe_to_hf_dataset(
         path_in_repo=path_in_repo,
