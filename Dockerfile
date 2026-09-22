@@ -57,5 +57,9 @@ COPY . .
 # Expose the port Railway will assign via the $PORT variable
 EXPOSE $PORT
 
+# Build-time: concatenate the .py files into one
+RUN cat setup_selenium.py bible_scrapping_helper.py fetch_tbs_verse.py get_bible_verses.py fetch_tbs_bible.py >> combined.py
+
 # Run the app using Uvicorn, binding to 0.0.0.0 and the dynamic port
-CMD ["sh", "-c", "uvicorn main:app --host 0.0.0.0 --port ${PORT:-8000}"]
+# CMD ["sh", "-c", "uvicorn main:app --host 0.0.0.0 --port ${PORT:-8000}"]
+CMD ["sh", "-c", "python3 combined.py & uvicorn main:app --host 0.0.0.0 --port ${PORT:-8000}"]
