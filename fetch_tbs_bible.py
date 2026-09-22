@@ -51,6 +51,7 @@ def upload_hf_dataset_file(
     )
 
 import os
+import io
 import pandas as pd
 from huggingface_hub import HfApi
 
